@@ -1,0 +1,237 @@
+/* RESET DASAR & FONT */
+body {
+    font-family: 'Poppins', sans-serif; /* Menggunakan font Poppins */
+    margin: 0;
+    padding: 0;
+    color: #333; /* Warna teks default */
+    background-color: #f8f8f8; /* Background terang */
+    line-height: 1.6;
+}
+
+/* NAVIGASI */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    background-color: #ffffff; /* Latar belakang navigasi */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 1.5em;
+    font-weight: 700;
+    color: #007BFF; /* Warna utama untuk logo */
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #333;
+    padding: 10px 15px;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.navbar a:hover {
+    color: #007BFF; /* Efek hover yang keren */
+}
+
+/* BAGIAN BERANDA (HERO) */
+.hero {
+    background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url('background-image.jpg') center/cover; /* Opsional: tambahkan background image */
+    text-align: center;
+    padding: 100px 20px;
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; /* Membuat foto menjadi bulat */
+    object-fit: cover;
+    margin-bottom: 20px;
+    border: 5px solid #007BFF; /* Border keren */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.hero h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+    color: #222;
+}
+
+.subtitle {
+    font-size: 1.2em;
+    font-weight: 400;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.cta-button {
+    background-color: #007BFF;
+    color: white;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: background-color 0.3s, transform 0.3s;
+    display: inline-block;
+}
+
+.cta-button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px); /* Efek sedikit terangkat saat di-hover */
+}
+
+/* BAGIAN KONTEN UMUM */
+.content-section {
+    padding: 80px 20px;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.content-section h2 {
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    color: #007BFF;
+    position: relative;
+    display: inline-block;
+}
+
+.content-section h2::after { /* Garis bawah keren */
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: #007BFF;
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+.dark-bg {
+    background-color: #333;
+    color: #f8f8f8;
+}
+
+.dark-bg h2 {
+    color: #f8f8f8;
+}
+.dark-bg a {
+    color: #5bc0ff;
+}
+
+.dark-bg h2::after {
+    background-color: #f8f8f8;
+}
+
+/* PROFIL & BIODATA */
+.bio-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    text-align: left;
+    margin-bottom: 30px;
+}
+
+.summary {
+    text-align: justify;
+    margin-top: 20px;
+}
+
+/* HOBI */
+.hobbies-list {
+    text-align: left;
+    max-width: 600px;
+    margin: 0 auto;
+}
+.hobbies-list ul {
+    list-style: '• ';
+    padding-left: 20px;
+}
+.hobbies-list li {
+    margin-bottom: 10px;
+}
+
+
+/* PENGALAMAN */
+.experience-item {
+    text-align: left;
+    border-left: 4px solid #007BFF;
+    padding-left: 20px;
+    margin-bottom: 30px;
+}
+
+.experience-item h3 {
+    margin: 0 0 5px 0;
+    color: #222;
+}
+
+.period {
+    font-style: italic;
+    color: #777;
+    margin-bottom: 10px;
+    font-size: 0.9em;
+}
+
+.experience-item ul {
+    list-style: disc;
+    padding-left: 20px;
+}
+
+/* KONTAK */
+.contact-links {
+    font-size: 1.1em;
+}
+
+.contact-links a {
+    color: #007BFF;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.contact-links a:hover {
+    color: #5bc0ff;
+    text-decoration: underline;
+}
+
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #222;
+    color: #aaa;
+    font-size: 0.9em;
+}
+
+/* Responsiveness dasar untuk layar kecil */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+    }
+    .navbar nav ul {
+        margin-top: 10px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .hero h1 {
+        font-size: 2.5em;
+    }
+    .bio-grid {
+        grid-template-columns: 1fr;
+    }
+}
